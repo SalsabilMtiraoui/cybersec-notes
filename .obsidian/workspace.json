@@ -11,10 +11,13 @@
             "id": "fd2aa49ffe4f58f4",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Vue graphique"
+              "type": "bases",
+              "state": {
+                "file": "Sans titre 1.base",
+                "viewName": "Tableau"
+              },
+              "icon": "lucide-table",
+              "title": "Sans titre 1"
             }
           }
         ]
@@ -167,6 +170,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
       "switcher:Ouvrir le sélecteur rapide": false,
       "graph:Ouvrir la vue graphique": false,
       "canvas:Créer une nouvelle toile": false,
@@ -178,6 +182,7 @@
   },
   "active": "fd2aa49ffe4f58f4",
   "lastOpenFiles": [
+    "Sans titre 1.base",
     "README.md",
     "Sans titre.canvas",
     "2026-04-20.md",
