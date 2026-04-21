@@ -13,11 +13,11 @@
             "state": {
               "type": "bases",
               "state": {
-                "file": "Sans titre 1.base",
+                "file": "Sans titre.base",
                 "viewName": "Tableau"
               },
               "icon": "lucide-table",
-              "title": "Sans titre 1"
+              "title": "Sans titre"
             }
           }
         ]
@@ -182,11 +182,11 @@
   },
   "active": "fd2aa49ffe4f58f4",
   "lastOpenFiles": [
+    "Bienvenue.md",
+    "2026-04-20.md",
     "Sans titre 1.base",
     "README.md",
     "Sans titre.canvas",
-    "2026-04-20.md",
-    "Sans titre.base",
-    "Bienvenue.md"
+    "Sans titre.base"
   ]
 }
