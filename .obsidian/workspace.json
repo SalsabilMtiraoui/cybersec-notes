@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sans titre.md",
+                "file": "security-plus-prep/01-Threats-Attacks-Vulnerabilities/CIA 1.2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sans titre"
+              "title": "CIA 1.2"
             }
           },
           {
@@ -41,16 +41,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "security-plus-prep/01-Threats-Attacks-Vulnerabilities/Cours 1.md",
+                "file": "security-plus-prep/01-Threats-Attacks-Vulnerabilities/Control types1.1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cours 1"
+              "title": "Control types1.1"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -82,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Technical",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -103,8 +103,7 @@
               "title": "Signets"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -221,13 +220,13 @@
       "bases:Créer une nouvelle base": false
     }
   },
-  "active": "539d7236222acf50",
+  "active": "5ad463622af66914",
   "lastOpenFiles": [
+    "security-plus-prep/01-Threats-Attacks-Vulnerabilities/Control types1.1.md",
+    "security-plus-prep/01-Threats-Attacks-Vulnerabilities/CIA 1.2.md",
     "Pasted image 20260424160303.png",
     "Pasted image 20260424160143.png",
     "security-plus-prep/01-Threats-Attacks-Vulnerabilities/Cours 1.canvas",
-    "security-plus-prep/01-Threats-Attacks-Vulnerabilities/Cours 1.md",
-    "Sans titre.md",
     "security-plus-prep/2026-04-21.md",
     "security-plus-prep/README.md",
     "security-plus-prep/practice-questions",
