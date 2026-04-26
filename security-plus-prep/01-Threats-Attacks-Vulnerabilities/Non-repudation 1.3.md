@@ -1,0 +1,3 @@
+Sign a contract : my signature adds non-repudation, make sur it's our word and can't take it back. Proof of integrity and origin, authenticity. 
+Proof of integrity : the data remains the same. In crypto we use a hash (like a fingerprint), if the person changes the hash changes. A hash verifies the integrity, it does NOT associate with an individual, only tells if the data is changed. 
+Gutenberg encyclopedia has a precise Hash, if the size is big, if we change one letter, the hash changes a lot, so it's hard to determine where the change was.

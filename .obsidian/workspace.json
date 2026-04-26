@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sans titre.md",
+                "file": "security-plus-prep/01-Threats-Attacks-Vulnerabilities/Non-repudation 1.3.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sans titre"
+              "title": "Non-repudation 1.3"
             }
           }
         ],
@@ -93,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "102e7fd2a38c3477",
@@ -208,8 +209,10 @@
   },
   "active": "cb5d64c6662cefa5",
   "lastOpenFiles": [
-    "security-plus-prep/01-Threats-Attacks-Vulnerabilities/CIA 1.2.md",
     "Sans titre.md",
+    "security-plus-prep/01-Threats-Attacks-Vulnerabilities/Non-repudation 1.3.md",
+    "cyber-sec notes/Sans titre",
+    "security-plus-prep/01-Threats-Attacks-Vulnerabilities/CIA 1.2.md",
     "security-plus-prep/01-Threats-Attacks-Vulnerabilities/Control types1.1.md",
     "cyber-sec notes/Security controls.md",
     "Pasted image 20260424160303.png",
@@ -232,7 +235,6 @@
     "Sans titre 1.canvas",
     "Sans titre.base",
     "2026-04-20.md",
-    "security-plus-prep",
     "README.md"
   ]
 }
