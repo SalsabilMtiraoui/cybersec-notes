@@ -62,9 +62,23 @@
               "icon": "lucide-file",
               "title": "Gap Analysis 1.2.4"
             }
+          },
+          {
+            "id": "1d674d6b67fc72d0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Zero Trust 1.2.5.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Zero Trust 1.2.5"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -235,8 +249,15 @@
       "bases:Créer une nouvelle base": false
     }
   },
-  "active": "3b14104091d41266",
+  "active": "1d674d6b67fc72d0",
   "lastOpenFiles": [
+    "Pasted image 20260427140919.png",
+    "Pasted image 20260427140857.png",
+    "Pasted image 20260427140838.png",
+    "Pasted image 20260427140643.png",
+    "Pasted image 20260427140241.png",
+    "Gap Analysis 1.2.4.md",
+    "Zero Trust 1.2.5.md",
     "Pasted image 20260427120247.png",
     "Pasted image 20260427120143.png",
     "Pasted image 20260427115850.png",
@@ -248,13 +269,9 @@
     "Pasted image 20260426195142.png",
     "Pasted image 20260426195011.png",
     "Pasted image 20260426185443.png",
-    "Pasted image 20260426185424.png",
-    "Gap Analysis 1.2.4.md",
     "cyber-sec notes/Sans titre",
     "security-plus-prep/01-Threats-Attacks-Vulnerabilities/Control types1.1.md",
     "cyber-sec notes/Security controls.md",
-    "Pasted image 20260424160303.png",
-    "Pasted image 20260424160143.png",
     "security-plus-prep/01-Threats-Attacks-Vulnerabilities/Cours 1.canvas",
     "security-plus-prep/2026-04-21.md",
     "security-plus-prep/README.md",
@@ -265,7 +282,6 @@
     "security-plus-prep/02-Architecture-Design",
     "security-plus-prep/01-Threats-Attacks-Vulnerabilities",
     "security-plus-prep/Bienvenue.md",
-    "Pasted image 20260421170251.png",
     "cyber-sec notes/Sans titre.canvas",
     "cyber-sec notes",
     "Bienvenue.md",
