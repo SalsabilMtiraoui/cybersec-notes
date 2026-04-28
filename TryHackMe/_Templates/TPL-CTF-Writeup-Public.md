@@ -7,22 +7,22 @@ difficulty:
 category: 
 ---
 
-# 🚩 Writeup : {{title}} — TryHackMe
+# Writeup : {{title}} — TryHackMe
 
-**Difficulté :** Medium  
+**Difficulty :** Medium  
 **Catégorie :** Web Exploitation  
 **Date :** <% tp.date.now("DD MMMM YYYY") %>  
 **Auteure :** [Ton Prénom](https://tryhackme.com/p/TONPSEUDO)
 
 ---
 
-## 📋 Résumé
+## Summary
 
 > En 3-4 phrases : contexte de la room, ce qu'elle simule, ce qu'on y apprend. Doit donner envie de lire la suite.
 
 ---
 
-## 🌐 Environnement
+##  Environnement
 
 | Élément | Détail |
 |---------|--------|
