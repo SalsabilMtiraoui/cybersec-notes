@@ -1,4 +1,7 @@
 [
   "obsidian-git",
-  "consistent-attachments-and-links"
+  "consistent-attachments-and-links",
+  "templater-obsidian",
+  "dataview",
+  "obsidian-kanban"
 ]
