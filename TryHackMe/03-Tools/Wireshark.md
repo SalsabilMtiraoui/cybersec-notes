@@ -9,13 +9,13 @@ last_updated: 2024-01-01
 
 ## 📖 Description
 
-> Analyseur de paquets réseau graphique. Capture et analyse le trafic réseau en temps réel.
+> Graphical network packet analyser. Captures and analyses network traffic in real time.
 
 ---
 
-## 🚀 Filtres essentiels
+## 🚀 Essential Filters
 
-### Filtres par protocole
+### Filter by protocol
 
 ```
 http
@@ -28,7 +28,7 @@ icmp
 smb
 ```
 
-### Filtres par IP
+### Filter by IP
 
 ```
 ip.addr == 10.10.X.X
@@ -36,22 +36,22 @@ ip.src == 10.10.X.X
 ip.dst == 10.10.X.X
 ```
 
-### Filtres par port
+### Filter by port
 
 ```
 tcp.port == 80
 udp.port == 53
 ```
 
-### Filtres combinés
+### Combined filters
 
 ```
 http && ip.addr == 10.10.X.X
 tcp.port == 80 || tcp.port == 443
-!(arp || dns || icmp)    # Exclure le bruit
+!(arp || dns || icmp)    # Exclude noise
 ```
 
-### Rechercher dans le contenu
+### Search within content
 
 ```
 tcp contains "password"
@@ -61,15 +61,15 @@ frame contains "flag"
 
 ---
 
-## 💡 Astuces
+## 💡 Tips & Tricks
 
-- `Follow TCP Stream` : reconstituer une conversation complète
-- `Export Objects > HTTP` : extraire fichiers transférés
-- `Statistics > Protocol Hierarchy` : vue d'ensemble du trafic
-- `Statistics > Conversations` : qui parle à qui
+- `Follow TCP Stream`: reconstruct a full conversation
+- `Export Objects > HTTP`: extract transferred files
+- `Statistics > Protocol Hierarchy`: traffic overview
+- `Statistics > Conversations`: who is talking to whom
 
 ---
 
-## 🔗 Ressources
+## 🔗 Resources
 
 - [Wireshark Display Filters](https://wiki.wireshark.org/DisplayFilters)

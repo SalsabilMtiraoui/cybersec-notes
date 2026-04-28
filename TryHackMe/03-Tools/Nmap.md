@@ -9,51 +9,51 @@ last_updated: 2024-01-01
 
 ## 📖 Description
 
-> Scanner de ports réseau permettant de découvrir les hôtes, services et versions actifs sur un réseau.
+> Network port scanner that discovers active hosts, services, and versions on a network.
 
-**Site officiel :** [nmap.org](https://nmap.org)
+**Official site:** [nmap.org](https://nmap.org)
 
 ---
 
-## 🚀 Commandes essentielles
+## 🚀 Essential Commands
 
-### Scan de base (le plus courant en CTF)
+### Basic scan (most common in CTFs)
 
 ```bash
 nmap -sC -sV -oN nmap_initial.txt <IP>
-# -sC : scripts par défaut
-# -sV : détection de version
-# -oN : sauvegarde en format normal
+# -sC : default scripts
+# -sV : version detection
+# -oN : save in normal format
 ```
 
-### Scan tous ports
+### All ports scan
 
 ```bash
 nmap -p- -T4 --min-rate 5000 -oN nmap_full.txt <IP>
-# -p- : tous les 65535 ports
-# -T4 : vitesse agressive
-# --min-rate : au moins 5000 paquets/sec
+# -p- : all 65535 ports
+# -T4 : aggressive speed
+# --min-rate : at least 5000 packets/sec
 ```
 
-### Scan UDP
+### UDP scan
 
 ```bash
 sudo nmap -sU --top-ports 20 <IP>
 ```
 
-### Scan furtif (SYN scan)
+### Stealth scan (SYN scan)
 
 ```bash
 sudo nmap -sS <IP>
 ```
 
-### Détection OS
+### OS detection
 
 ```bash
 sudo nmap -O <IP>
 ```
 
-### Scan avec scripts NSE spécifiques
+### Scan with specific NSE scripts
 
 ```bash
 nmap --script vuln <IP>
@@ -63,37 +63,37 @@ nmap --script http-enum <IP>
 
 ---
 
-## 📋 Flags importants
+## 📋 Important Flags
 
 | Flag | Description |
 |------|-------------|
-| `-sC` | Scripts NSE par défaut |
-| `-sV` | Détection des versions |
-| `-sS` | SYN scan (furtif, nécessite root) |
-| `-sU` | Scan UDP |
-| `-p-` | Tous les ports (1-65535) |
-| `-p 80,443` | Ports spécifiques |
-| `-T1` à `-T5` | Vitesse (1=lent/furtif, 5=rapide/bruyant) |
-| `-oN` | Output format normal |
-| `-oX` | Output format XML |
-| `-oG` | Output format grepable |
-| `-oA` | Output tous les formats |
+| `-sC` | Default NSE scripts |
+| `-sV` | Service version detection |
+| `-sS` | SYN scan (stealth, requires root) |
+| `-sU` | UDP scan |
+| `-p-` | All ports (1-65535) |
+| `-p 80,443` | Specific ports |
+| `-T1` to `-T5` | Speed (1=slow/stealth, 5=fast/noisy) |
+| `-oN` | Normal output format |
+| `-oX` | XML output format |
+| `-oG` | Grepable output format |
+| `-oA` | All output formats |
 | `-A` | OS + version + scripts + traceroute |
-| `--min-rate` | Paquets/sec minimum |
-| `-v` / `-vv` | Verbosité |
+| `--min-rate` | Minimum packets/sec |
+| `-v` / `-vv` | Verbosity |
 
 ---
 
-## 💡 Tips & astuces
+## 💡 Tips & Tricks
 
-- Toujours sauvegarder les résultats avec `-oN` ou `-oA`
-- En CTF, commencer par un scan rapide, puis scan complet en parallèle
-- Les scripts `vuln` peuvent prendre du temps mais révèlent beaucoup
-- `grep "open" nmap_full.txt` pour filtrer rapidement les ports ouverts
+- Always save results with `-oN` or `-oA`
+- In CTFs, start with a quick scan, then run a full scan in parallel
+- `vuln` scripts take time but reveal a lot
+- `grep "open" nmap_full.txt` to quickly filter open ports
 
 ---
 
-## 🔗 Ressources
+## 🔗 Resources
 
 - [Nmap Cheat Sheet — StationX](https://www.stationx.net/nmap-cheat-sheet/)
 - [HackTricks — Nmap](https://book.hacktricks.xyz/generic-methodologies-and-resources/pentesting-network/nmap-cheatsheet-hack-tricks)

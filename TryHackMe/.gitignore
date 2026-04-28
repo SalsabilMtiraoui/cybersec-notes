@@ -1,16 +1,16 @@
-# Obsidian workspace (local uniquement)
+# Obsidian workspace (local only)
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
 
-# Fichiers systeme
+# System files
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# Fichiers temporaires
+# Temporary files
 *.tmp
 *.bak
 ~*
 
-# Ne pas publier les assets trop lourds
+# Do not publish heavy assets
 Assets/Screenshots/*.png

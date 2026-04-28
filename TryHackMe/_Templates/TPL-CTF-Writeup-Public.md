@@ -7,114 +7,114 @@ difficulty:
 category: 
 ---
 
-# Writeup : {{title}} — TryHackMe
+# 🚩 Writeup: {{title}} — TryHackMe
 
-**Difficulty :** Medium  
-**Catégorie :** Web Exploitation  
-**Date :** <% tp.date.now("DD MMMM YYYY") %>  
-**Auteure :** [Ton Prénom](https://tryhackme.com/p/TONPSEUDO)
-
----
-
-## Summary
-
-> En 3-4 phrases : contexte de la room, ce qu'elle simule, ce qu'on y apprend. Doit donner envie de lire la suite.
+**Difficulty:** Medium  
+**Category:** Web Exploitation  
+**Date:** <% tp.date.now("DD MMMM YYYY") %>  
+**Author:** [Your Name](https://tryhackme.com/p/YOURUSERNAME)
 
 ---
 
-##  Environnement
+## 📋 Summary
 
-| Élément | Détail |
+> 3-4 sentences: context of the room, what it simulates, what you learn. Should make the reader want to continue.
+
+---
+
+## 🌐 Environment
+
+| Element | Detail |
 |---------|--------|
-| OS cible | Ubuntu 20.04 |
-| IP cible | `10.10.X.X` |
-| Services exposés | HTTP (80), SSH (22) |
-| Outils utilisés | Nmap, Gobuster, Burp Suite |
+| Target OS | Ubuntu 20.04 |
+| Target IP | `10.10.X.X` |
+| Exposed Services | HTTP (80), SSH (22) |
+| Tools Used | Nmap, Gobuster, Burp Suite |
 
 ---
 
-## 🔍 Étape 1 — Reconnaissance
+## 🔍 Step 1 — Reconnaissance
 
-Première étape systématique : identifier les surfaces d'attaque.
+First systematic step: identify the attack surface.
 
 ```bash
 nmap -sC -sV -oN nmap.txt 10.10.X.X
 ```
 
-Les résultats montrent [décrire ce que tu vois et pourquoi c'est intéressant].
+The results show [describe what you see and why it is interesting].
 
 ---
 
-## 📂 Étape 2 — Énumération
+## 📂 Step 2 — Enumeration
 
-[Décris ta démarche logique — pourquoi tu choisis d'explorer tel service en premier]
+[Describe your logical reasoning — why you choose to explore a particular service first]
 
 ```bash
 gobuster dir -u http://10.10.X.X -w /usr/share/wordlists/dirb/common.txt
 ```
 
-J'ai découvert [ce que tu as trouvé], ce qui m'a conduite à [prochaine étape].
+I discovered [what you found], which led me to [next step].
 
 ---
 
-## 💥 Étape 3 — Exploitation
+## 💥 Step 3 — Exploitation
 
-### Identification de la vulnérabilité
+### Vulnerability Identification
 
-[Explique la vulnérabilité en langage clair — mécanisme, pourquoi elle existe]
+[Explain the vulnerability in plain language — mechanism, why it exists]
 
 ### Exploitation
 
 ```bash
-# Payload / commande utilisée
+# Payload / command used
 ```
 
-[Décris ce qui se passe, le résultat obtenu]
+[Describe what happens, the result obtained]
 
 ---
 
-## 🔼 Étape 4 — Élévation de privilèges
+## 🔼 Step 4 — Privilege Escalation
 
-[Décris comment tu passes de user à root / SYSTEM]
+[Describe how you move from user to root / SYSTEM]
 
 ```bash
 sudo -l
-# ou
+# or
 find / -perm -4000 2>/dev/null
 ```
 
-[Explique le vecteur de privesc et pourquoi il fonctionne]
+[Explain the privesc vector and why it works]
 
 ---
 
-## 🏳️ Flags obtenus
+## 🏳️ Flags Obtained
 
-| Flag | Localisation |
-|------|--------------|
+| Flag | Location |
+|------|----------|
 | `THM{user_flag}` | `/home/user/user.txt` |
 | `THM{root_flag}` | `/root/root.txt` |
 
 ---
 
-## 📚 Ce que j'ai appris
+## 📚 What I Learned
 
-- **[Concept 1] :** explication
-- **[Concept 2] :** explication
-- **[Concept 3] :** explication
-
----
-
-## 🛡️ Recommandations de remédiation
-
-> Section bonus appréciée des recruteurs — montre que tu penses en défenseur aussi
-
-- Mettre à jour [service vulnérable] vers la version X
-- Désactiver [fonctionnalité inutile]
-- Implémenter [contrôle de sécurité]
+- **[Concept 1]:** explanation
+- **[Concept 2]:** explanation
+- **[Concept 3]:** explanation
 
 ---
 
-## 🔗 Références
+## 🛡️ Remediation Recommendations
 
-- [Documentation officielle](https://...)
+> Bonus section appreciated by recruiters — shows you also think like a defender
+
+- Update [vulnerable service] to version X
+- Disable [unnecessary feature]
+- Implement [security control]
+
+---
+
+## 🔗 References
+
+- [Official documentation](https://...)
 - [CVE-XXXX-XXXX](https://nvd.nist.gov/vuln/detail/CVE-XXXX-XXXX)

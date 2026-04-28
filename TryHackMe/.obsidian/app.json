@@ -2,5 +2,6 @@
   "defaultViewMode": "source",
   "foldHeading": false,
   "showLineNumber": true,
-  "spellcheck": false
+  "spellcheck": false,
+  "theme": "obsidian"
 }

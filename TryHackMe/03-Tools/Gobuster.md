@@ -9,34 +9,34 @@ last_updated: 2024-01-01
 
 ## 📖 Description
 
-> Outil de brute-force de répertoires/fichiers web, sous-domaines DNS et virtual hosts.
+> Brute-force tool for web directories/files, DNS subdomains, and virtual hosts.
 
 ---
 
-## 🚀 Commandes essentielles
+## 🚀 Essential Commands
 
-### Enumération de répertoires (le plus courant)
+### Directory enumeration (most common)
 
 ```bash
 gobuster dir -u http://<IP> -w /usr/share/wordlists/dirb/common.txt
 ```
 
-### Avec extensions de fichiers
+### With file extensions
 
 ```bash
 gobuster dir -u http://<IP> -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x php,html,txt,bak
 ```
 
-### Avec output fichier
+### With file output
 
 ```bash
 gobuster dir -u http://<IP> -w /usr/share/wordlists/dirb/common.txt -o gobuster_results.txt
 ```
 
-### Enumération DNS (sous-domaines)
+### DNS enumeration (subdomains)
 
 ```bash
-gobuster dns -d domaine.com -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-5000.txt
+gobuster dns -d domain.com -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-5000.txt
 ```
 
 ### Virtual hosts
@@ -47,38 +47,38 @@ gobuster vhost -u http://<IP> -w /usr/share/wordlists/SecLists/Discovery/DNS/sub
 
 ---
 
-## 📋 Flags importants
+## 📋 Important Flags
 
 | Flag | Description |
 |------|-------------|
-| `-u` | URL cible |
+| `-u` | Target URL |
 | `-w` | Wordlist |
 | `-x` | Extensions (php,html,txt) |
-| `-o` | Output fichier |
-| `-t` | Threads (défaut 10) |
-| `-s` | Status codes à afficher |
-| `-b` | Status codes à ignorer |
-| `--timeout` | Timeout par requête |
-| `-k` | Ignorer les erreurs SSL |
+| `-o` | Output file |
+| `-t` | Threads (default 10) |
+| `-s` | Status codes to show |
+| `-b` | Status codes to ignore |
+| `--timeout` | Per-request timeout |
+| `-k` | Ignore SSL errors |
 
 ---
 
-## 💡 Wordlists recommandées
+## 💡 Recommended Wordlists
 
 ```bash
-# Petite (rapide)
+# Small (fast)
 /usr/share/wordlists/dirb/common.txt
 
-# Moyenne (bon équilibre)
+# Medium (good balance)
 /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
 
-# Grande (via SecLists)
+# Large (via SecLists)
 /usr/share/wordlists/SecLists/Discovery/Web-Content/raft-large-directories.txt
 ```
 
 ---
 
-## 🔗 Ressources
+## 🔗 Resources
 
 - [GitHub Gobuster](https://github.com/OJ/gobuster)
 - [SecLists Wordlists](https://github.com/danielmiessler/SecLists)

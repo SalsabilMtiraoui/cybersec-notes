@@ -1,9 +1,9 @@
 # 🗺️ Dashboard — CyberSec Notes
 
-## 📊 Progression JR Pentester Path
+## 📊 JR Pentester Path Progress
 
 ```dataview
-TABLE room AS "Room", difficulty AS "Difficulté", status AS "Statut", date AS "Date"
+TABLE room AS "Room", difficulty AS "Difficulty", status AS "Status", date AS "Date"
 FROM "01-TryHackMe/JR-Pentester-Path"
 WHERE file.name != "_INDEX"
 SORT date DESC
@@ -11,10 +11,10 @@ SORT date DESC
 
 ---
 
-## ✅ Rooms terminées
+## ✅ Completed Rooms
 
 ```dataview
-TABLE room AS "Room", category AS "Catégorie", date AS "Date"
+TABLE room AS "Room", category AS "Category", date AS "Date"
 FROM "01-TryHackMe"
 WHERE status = "✅ Done"
 SORT date DESC
@@ -22,7 +22,7 @@ SORT date DESC
 
 ---
 
-## 🔄 En cours
+## 🔄 In Progress
 
 ```dataview
 LIST
@@ -32,20 +32,20 @@ WHERE status = "🔄 In Progress"
 
 ---
 
-## 🛠️ Outils documentés
+## 🛠️ Documented Tools
 
 ```dataview
-TABLE file.mtime AS "Dernière modif"
+TABLE file.mtime AS "Last Modified"
 FROM "03-Tools"
 SORT file.name ASC
 ```
 
 ---
 
-## 📅 Activité récente
+## 📅 Recent Activity
 
 ```dataview
-TABLE file.mtime AS "Modifié le"
+TABLE file.mtime AS "Modified"
 FROM "01-TryHackMe" OR "04-Vulnerabilities"
 SORT file.mtime DESC
 LIMIT 10

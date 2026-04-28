@@ -2,50 +2,50 @@
 tags: [methodology, reconnaissance, checklist]
 ---
 
-# ✅ Checklist Reconnaissance
+# ✅ Reconnaissance Checklist
 
-> À dérouler systématiquement au début de chaque room / engagement
+> Run through this systematically at the start of each room / engagement
 
 ---
 
 ## 🌐 Web
 
-- [ ] Technologies identifiées (Wappalyzer, whatweb)
-- [ ] En-têtes HTTP analysés (`curl -I`)
-- [ ] Code source HTML inspecté
-- [ ] Robots.txt consulté → `/robots.txt`
-- [ ] Sitemap consulté → `/sitemap.xml`
-- [ ] Répertoires énumérés (Gobuster)
-- [ ] Sous-domaines énumérés (si domaine)
-- [ ] Fichiers de backup cherchés (`.bak`, `.old`, `.swp`)
-- [ ] Nikto lancé
+- [ ] Technologies identified (Wappalyzer, whatweb)
+- [ ] HTTP headers analysed (`curl -I`)
+- [ ] HTML source code inspected
+- [ ] Robots.txt checked → `/robots.txt`
+- [ ] Sitemap checked → `/sitemap.xml`
+- [ ] Directories enumerated (Gobuster)
+- [ ] Subdomains enumerated (if domain)
+- [ ] Backup files searched (`.bak`, `.old`, `.swp`)
+- [ ] Nikto run
 
-## 🔌 Réseau
+## 🔌 Network
 
-- [ ] Scan de ports rapide (nmap -F)
-- [ ] Scan complet tous ports (nmap -p-)
-- [ ] Détection de versions (-sV)
-- [ ] Scripts par défaut (-sC)
-- [ ] Scan UDP si nécessaire
+- [ ] Quick port scan (nmap -F)
+- [ ] Full scan all ports (nmap -p-)
+- [ ] Version detection (-sV)
+- [ ] Default scripts (-sC)
+- [ ] UDP scan if needed
 
-## 🗂️ Services spécifiques
+## 🗂️ Specific Services
 
 ### FTP (21)
-- [ ] Login anonyme testé (`anonymous` / `anonymous`)
-- [ ] Contenu listé
+- [ ] Anonymous login tested (`anonymous` / `anonymous`)
+- [ ] Contents listed
 
 ### SSH (22)
-- [ ] Version notée (vulnérabilités?)
-- [ ] Brute force si usernames connus
+- [ ] Version noted (vulnerabilities?)
+- [ ] Brute force if usernames known
 
 ### SMB (445)
-- [ ] Shares listés (`smbclient -L`)
-- [ ] Accès anonyme testé
-- [ ] `enum4linux -A` lancé
+- [ ] Shares listed (`smbclient -L`)
+- [ ] Anonymous access tested
+- [ ] `enum4linux -A` run
 
 ### HTTP/HTTPS (80/443)
-- [ ] Voir checklist Web ci-dessus
+- [ ] See Web checklist above
 
-### Base de données (3306, 5432, 27017...)
-- [ ] Connexion sans auth testée
-- [ ] Credentials par défaut testés
+### Database (3306, 5432, 27017...)
+- [ ] Unauthenticated connection tested
+- [ ] Default credentials tested

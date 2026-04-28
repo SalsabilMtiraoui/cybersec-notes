@@ -1,12 +1,12 @@
-# 🛠️ Index des outils
+# 🛠️ Tools Index
 
-| Outil | Catégorie | Description courte |
-|-------|-----------|-------------------|
-| [[Nmap]] | Reconnaissance | Scanner de ports réseau |
-| [[Gobuster]] | Énumération Web | Brute-force de répertoires/DNS |
-| [[Burp-Suite]] | Web Exploitation | Proxy HTTP / Interception |
-| [[Metasploit]] | Exploitation | Framework d'exploitation |
-| [[Hydra]] | Brute Force | Attaque de mots de passe |
-| [[Wireshark]] | Analyse Réseau | Capture et analyse de paquets |
+| Tool | Category | Short Description |
+|------|----------|-------------------|
+| [[Nmap]] | Reconnaissance | Network port scanner |
+| [[Gobuster]] | Web Enumeration | Directory/DNS brute-forcer |
+| [[Burp-Suite]] | Web Exploitation | HTTP proxy / interception |
+| [[Metasploit]] | Exploitation | Exploitation framework |
+| [[Hydra]] | Brute Force | Password attack tool |
+| [[Wireshark]] | Network Analysis | Packet capture and analysis |
 
-> Ajouter des outils au fur et à mesure des rooms avec le template [[../_Templates/TPL-Outil]]
+> Add tools as you encounter them using the template [[../_Templates/TPL-Tool]]

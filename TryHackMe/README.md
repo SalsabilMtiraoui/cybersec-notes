@@ -1,34 +1,34 @@
 # 🛡️ CyberSec Notes
 
-> Notes, writeups et documentation de mon parcours en cybersécurité  
-> **Master BENEFRI — Spécialité Sécurité T2**
+> Notes, writeups and lab documentation from my cybersecurity journey  
+> **BENEFRI Master's — Security Specialisation T2**
 
 ---
 
-## 🎯 Progression TryHackMe
+## 🎯 TryHackMe Progress
 
-<!-- Remplace TONPSEUDO par ton pseudo THM -->
-[![TryHackMe](https://tryhackme-badges.s3.amazonaws.com/TONPSEUDO.png)](https://tryhackme.com/p/TONPSEUDO)
+<!-- Replace YOURUSERNAME with your THM username -->
+[![TryHackMe](https://tryhackme-badges.s3.amazonaws.com/YOURUSERNAME.png)](https://tryhackme.com/p/YOURUSERNAME)
 
-| Path | Modules complétés | Statut |
+| Path | Modules Completed | Status |
 |------|-------------------|--------|
-| Jr Penetration Tester | 0 / 10 | 🔄 En cours |
+| Jr Penetration Tester | 0 / 10 | 🔄 In Progress |
 
 ---
 
-## 📁 Structure du vault
+## 📁 Vault Structure
 
-| Dossier | Contenu |
-|---------|---------|
-| `01-TryHackMe/` | Writeups et notes de labs THM |
-| `02-Methodologies/` | Méthodologies pentest (OWASP, PTES…) |
-| `03-Tools/` | Fiches de référence par outil |
-| `04-Vulnerabilities/` | Base de connaissances vulnérabilités |
-| `05-Resources/` | Cheatsheets et liens utiles |
+| Folder | Content |
+|--------|---------|
+| `01-TryHackMe/` | THM lab writeups and notes |
+| `02-Methodologies/` | Pentest methodologies (OWASP, PTES…) |
+| `03-Tools/` | Tool reference sheets |
+| `04-Vulnerabilities/` | Vulnerability knowledge base |
+| `05-Resources/` | Cheatsheets and useful links |
 
 ---
 
-## 🧰 Stack technique utilisée
+## 🧰 Tech Stack
 
 ![Kali](https://img.shields.io/badge/Kali_Linux-557C94?style=flat&logo=kalilinux&logoColor=white)
 ![Burp Suite](https://img.shields.io/badge/Burp_Suite-FF6633?style=flat&logo=burpsuite&logoColor=white)
@@ -40,20 +40,20 @@
 
 ---
 
-## 📌 Writeups récents
+## 📌 Recent Writeups
 
-<!-- Mis à jour manuellement au fil des rooms -->
-| Room | Catégorie | Difficulté | Date |
-|------|-----------|------------|------|
-| *à compléter* | | | |
-
----
-
-## 📚 Contexte académique
-
-Notes réalisées en parallèle du **Master BENEFRI** (Berne–Fribourg–Neuchâtel)  
-Spécialité : Computer Science — Security Track T2
+<!-- Update manually as you complete rooms -->
+| Room | Category | Difficulty | Date |
+|------|----------|------------|------|
+| *to be filled* | | | |
 
 ---
 
-*Dernière mise à jour : 2024*
+## 📚 Academic Context
+
+Notes written alongside the **BENEFRI Master's** (Berne–Fribourg–Neuchâtel)  
+Specialisation: Computer Science — Security Track T2
+
+---
+
+*Last updated: 2024*

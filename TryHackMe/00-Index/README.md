@@ -1,13 +1,13 @@
-# 📖 Index général
+# 📖 General Index
 
-## Navigation rapide
+## Quick Navigation
 
-- [[Dashboard]] — Vue d'ensemble Obsidian
-- [[../01-TryHackMe/JR-Pentester-Path/_INDEX|JR Pentester Path]] — Progression THM
-- [[../02-Methodologies/Pentest-Phases|Phases du pentest]] — Méthodologie globale
-- [[../03-Tools/_INDEX|Index des outils]] — Toutes les fiches outils
-- [[../04-Vulnerabilities/_INDEX|Index des vulnérabilités]] — Base de connaissances
+- [[Dashboard]] — Obsidian overview
+- [[../01-TryHackMe/JR-Pentester-Path/_INDEX|JR Pentester Path]] — THM progress
+- [[../02-Methodologies/Pentest-Phases|Pentest Phases]] — Global methodology
+- [[../03-Tools/_INDEX|Tools Index]] — All tool sheets
+- [[../04-Vulnerabilities/_INDEX|Vulnerabilities Index]] — Knowledge base
 
-## Liens rapides THM
+## Quick THM Links
 - [Jr Penetration Tester Path](https://tryhackme.com/path/outline/jrpenetrationtester)
-- [Mon profil THM](https://tryhackme.com/p/TONPSEUDO)
+- [My THM Profile](https://tryhackme.com/p/YOURUSERNAME)

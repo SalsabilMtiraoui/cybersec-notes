@@ -9,11 +9,11 @@ last_updated: 2024-01-01
 
 ## 📖 Description
 
-> Outil de brute-force rapide et parallélisé supportant de nombreux protocoles d'authentification.
+> Fast, parallelised brute-force tool supporting a large number of authentication protocols.
 
 ---
 
-## 🚀 Commandes essentielles
+## 🚀 Essential Commands
 
 ### SSH
 
@@ -26,8 +26,8 @@ hydra -L users.txt -P passwords.txt ssh://<IP> -t 4
 
 ```bash
 hydra -l admin -P rockyou.txt <IP> http-post-form "/login:username=^USER^&password=^PASS^:F=Invalid credentials"
-# F= : message indiquant un ÉCHEC
-# S= : message indiquant un SUCCÈS
+# F= : message indicating FAILURE
+# S= : message indicating SUCCESS
 ```
 
 ### HTTP GET (basic auth)
@@ -50,30 +50,30 @@ hydra -l <user> -P rockyou.txt smb://<IP>
 
 ---
 
-## 📋 Flags importants
+## 📋 Important Flags
 
 | Flag | Description |
 |------|-------------|
-| `-l` | Username unique |
-| `-L` | Fichier de usernames |
-| `-p` | Password unique |
-| `-P` | Fichier de passwords |
-| `-t` | Threads parallèles |
-| `-s` | Port spécifique |
-| `-f` | Stop au premier succès |
-| `-o` | Output fichier |
+| `-l` | Single username |
+| `-L` | Username file |
+| `-p` | Single password |
+| `-P` | Password file |
+| `-t` | Parallel threads |
+| `-s` | Specific port |
+| `-f` | Stop on first success |
+| `-o` | Output file |
 | `-v` | Verbose |
 
 ---
 
 ## 💡 Tips
 
-- `rockyou.txt` est à `/usr/share/wordlists/rockyou.txt` (gunzip si nécessaire)
-- Limiter les threads (`-t 4`) pour SSH pour éviter le rate limiting
-- Pour HTTP POST : identifier les champs avec Burp Suite d'abord
+- `rockyou.txt` is at `/usr/share/wordlists/rockyou.txt` (gunzip if needed)
+- Limit threads (`-t 4`) for SSH to avoid rate limiting
+- For HTTP POST: identify form fields with Burp Suite first
 
 ---
 
-## 🔗 Ressources
+## 🔗 Resources
 
 - [Hydra cheatsheet](https://github.com/frizb/Hydra-Cheatsheet)
