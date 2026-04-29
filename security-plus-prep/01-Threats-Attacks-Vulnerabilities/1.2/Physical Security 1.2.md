@@ -1,0 +1,10 @@
+- Barricades/bollards : prevent acces to limited areas. Creating acces points to channel the people that go through.
+Identify safety concers, and can be used to an etreme. 
+- Access control vestibules : all doors are normally unlocked, but when one is open the others lock. Or all doors locked, and unlocking one prevents the others from being unlocked. Exemple : nee to go through one room to reach the infos we want. One at a time, controleld groups (managed control through areas). 
+- Fencing : easy and simple, obvious but still a security control. Transparent or not (people can't see through), unbreakable and unclimbale. 
+- Video surveillance : CCTV : closed circuit television, becoming smarter and more capable to detect and report. Can replace physial guards.
+	- Motion recognition : alarm and alert when something moves
+	- Object detection : identify a licnce plate or a face. 
+- Security guard : physical protection in something that can happen in a specific space. Minimize exposure guard, two persons integrity/contol !! to make sure no single person has access to the physical asset
+	- Access badge : picture, name and details, must be worn all the time and alectronically logged.
+- Lightning : 
