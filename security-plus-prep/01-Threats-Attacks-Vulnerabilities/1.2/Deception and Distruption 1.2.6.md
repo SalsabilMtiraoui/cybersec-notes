@@ -1,0 +1,5 @@
+Honepot :  create a virtual world to explore, way to attract attackers and trap them there, in most cases the attackers are a machine, makes for interesting recon. What type of system ? There's many open source honeypots availible, so it's a constant battle to recognise the real from the fake
+
+- Honeynets : the network has many devices (servers, firewalls, workstations). Larger deception network with on or more honeypots. Stop spammers : projecthoneypot.org
+- Honeyfiles : fake files with fake infos, bait for the honeynet (ex: password.txt), add many honeyfiles to file shares. A virtual bear trap ! it can activate an alarm on what's happening. 
+- Honeytoken : add some traceable data to the honeynet, so if the data is stolen you'll know where it came from. API cedentials : does not actually provide access, and notifications are sent once they're used. Fake mail addresses : add it to the contact list and monitor the internet to see who uses it. There's a lot of honeytoken examples : database records, web page, browser cookies....

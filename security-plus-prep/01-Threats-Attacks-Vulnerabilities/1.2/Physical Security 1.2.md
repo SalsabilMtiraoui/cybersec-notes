@@ -7,4 +7,8 @@ Identify safety concers, and can be used to an etreme.
 	- Object detection : identify a licnce plate or a face. 
 - Security guard : physical protection in something that can happen in a specific space. Minimize exposure guard, two persons integrity/contol !! to make sure no single person has access to the physical asset
 	- Access badge : picture, name and details, must be worn all the time and alectronically logged.
-- Lightning : 
+- Lightning : more lights mean more security, attackers avoid light (to not be seen or exposed) and Non IR cameras can see better. Specialized design : angles, lighten the whole area. Parking lots lights make sure every car is bisible.
+- Infrared rediation : to capture what's happenig even in the dark. Common in motion detectors. 
+	- Pressure sensor detect change in force, like floor or window sensors. 
+	- Microwave technology : detects movement accross large areas
+	- Ultrasonic : send ultrasonic signals, detect motions, collision detection ect.
