@@ -17,3 +17,10 @@ Some applications were here before you arrived, they'll be here when you leave. 
 
 ## Dependencies
 
+To complete A you must complete B. A service won't start without another active service. Ex : an application needs a specific library. Modifying one component may require changing or restarting other services, sometimes dependancies are accross systems (different hardwares). Upgrade the firewall code first, then upgrade the firewall management software.
+
+## Documetation 
+It can be challenging to keep with the change, documentations can be outdated and require to be changed with the change of management process. Updating diagrams : modifications, address updates. Updating policies/procedures,adding a new system amy require a new procedure. 
+
+## Version control 
+Track changes to a file or configuration data over time, easily revert to a previous setting. Many opportunities to manage versions : router configurations, windows OS patches, application registery entries. Not always straightforward : some devices and operating systems provide version control features, may require additional management software.
